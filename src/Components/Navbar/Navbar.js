@@ -8,6 +8,7 @@ import {
   MdFullscreenExit,
 } from "react-icons/md";
 import { FiMessageSquare } from "react-icons/fi";
+import avatar from "../../assets/images/avatar.jpg";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -16,28 +17,33 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="search">
           <input type="text" placeholder="Search..." />
-          <BsSearch className="icon"/>
+          <BsSearch className="icon" />
         </div>
         <div className="items">
           <div className="item">
-            <MdLanguage className="icon"/>
+            <MdLanguage className="icon" />
             <span>English</span>
           </div>
           <div className="item">
-            <MdOutlineDarkMode className="icon"/>
+            <MdOutlineDarkMode className="icon" />
           </div>
           <div className="item"></div>
           <div className="item">
-            <MdFullscreenExit className="icon"/>
+            <MdFullscreenExit className="icon" />
           </div>
           <div className="item">
-            <MdNotificationsNone className="icon"/>
+            <MdNotificationsNone className="icon" />
+            <div className="counter">1</div>
           </div>
           <div className="item">
-            <FiMessageSquare className="icon"/>
+            <FiMessageSquare className="icon" />
+            <div className="counter">2</div>
           </div>
           <div className="item">
-            <MdList className="icon"/>
+            <MdList className="icon" />
+          </div>
+          <div className="item">
+            <img src={avatar} alt="" className="avatar"/>
           </div>
         </div>
       </div>
