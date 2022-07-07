@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsSearch } from "react-icons/bs";
 import {
   MdLanguage,
@@ -10,8 +10,10 @@ import {
 import { FiMessageSquare } from "react-icons/fi";
 import avatar from "../../assets/images/avatar.jpg";
 import "./Navbar.scss";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 const Navbar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -25,9 +27,11 @@ const Navbar = () => {
             <span>English</span>
           </div>
           <div className="item">
-            <MdOutlineDarkMode className="icon" />
+            <MdOutlineDarkMode
+              className="icon"
+              onClick={() => dispatch({ type: "TOGGLE" })}
+            />
           </div>
-          <div className="item"></div>
           <div className="item">
             <MdFullscreenExit className="icon" />
           </div>
@@ -43,7 +47,7 @@ const Navbar = () => {
             <MdList className="icon" />
           </div>
           <div className="item">
-            <img src={avatar} alt="" className="avatar"/>
+            <img src={avatar} alt="" className="avatar" />
           </div>
         </div>
       </div>
