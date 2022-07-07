@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   MdOutlineDashboard,
   MdOutlineProductionQuantityLimits,
@@ -19,7 +20,9 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Dashboard</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">Dashboard</span>
+        </Link>
       </div>
       <div className="center">
         <ul>
@@ -29,14 +32,18 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </li>
           <p className="title">LIST</p>
-          <li>
-            <HiOutlineUsers className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <MdOutlineProductionQuantityLimits className="icon" />
-            <span>Products</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <HiOutlineUsers className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
+              <MdOutlineProductionQuantityLimits className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
           <li>
             <AiOutlineIdcard className="icon" />
             <span>Orders</span>

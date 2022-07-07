@@ -3,6 +3,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Chart from "../../Components/Chart/Chart";
 import Table from "../../Components/Table/Table";
+import avatar from "../../assets/images/avatar.jpg"
 import "./Single.scss";
 
 const Single = () => {
@@ -17,7 +18,7 @@ const Single = () => {
             <div className="item">
               <div className="editButton">Edit</div>
               <img
-                src="https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                src={avatar}
                 alt=""
                 className="itemImg"
               />
