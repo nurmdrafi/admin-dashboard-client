@@ -1,6 +1,6 @@
 import { DataGrid } from "@mui/x-data-grid";
 import React from "react";
-import { userColumns, userRows } from "../../Pages/DataTableSource";
+import { userColumns, userRows } from "../../DataTableSource";
 import "./DataTable.scss";
 
 const DataTable = () => {
