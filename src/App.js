@@ -6,10 +6,11 @@ import Single from "./Pages/Single/Single";
 import New from "./Pages/New/New";
 import NotFound from "./Pages/NotFound/NotFound";
 import { productInputs, userInputs } from "./formSource";
+import "./Style/Dark.scss"
 
 function App() {
   return (
-    <div>
+    <div className="app dark">
       <Routes>
         <Route path="">
           <Route index element={<Home />} />

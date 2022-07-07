@@ -28,8 +28,10 @@ const Sidebar = () => {
         <ul>
           <p className="title">MAIN</p>
           <li>
-            <MdOutlineDashboard className="icon" />
-            <span>Dashboard</span>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <MdOutlineDashboard className="icon" />
+              <span>Dashboard</span>
+            </Link>
           </li>
           <p className="title">LIST</p>
           <Link to="/users" style={{ textDecoration: "none" }}>
