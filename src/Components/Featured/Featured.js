@@ -4,6 +4,19 @@ import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./Featured.scss";
+
+/* 
+conditional rendering using stord value such as,
+{status: active, status: passive},
+className={`cellWithStatus ${params.row.status}`}
+cellWithStatus{
+&.active{
+color: red
+background-color: red // to > rgba()
+}
+&.passive{}
+}
+*/
 const Featured = () => {
   return (
     <div className="featured">

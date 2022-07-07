@@ -4,6 +4,7 @@ export const userColumns = [
       field: "user",
       headerName: "User",
       width: 230,
+      // flex: 1,
       renderCell: (params) => {
         return (
           <div className="cellWithImg">
@@ -17,17 +18,20 @@ export const userColumns = [
       field: "email",
       headerName: "Email",
       width: 230,
+      // flex: 1,
     },
   
     {
       field: "age",
       headerName: "Age",
-      width: 100,
+      minWidth: 100,
+      flex: 1,
     },
     {
       field: "status",
       headerName: "Status",
-      width: 160,
+      minWidth: 160,
+      flex: 1,
       renderCell: (params) => {
         return (
           <div className={`cellWithStatus ${params.row.status}`}>
@@ -38,7 +42,6 @@ export const userColumns = [
     },
   ];
   
-  //temporary data
   export const userRows = [
     {
       id: 1,

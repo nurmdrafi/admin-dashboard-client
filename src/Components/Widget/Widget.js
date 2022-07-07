@@ -10,16 +10,26 @@ const Widget = ({ type }) => {
   // temporary
   const amount = 100;
   const percentage = 20;
+  /* 
+  Similar in look different in data,
+  here, 4 types Widget components exists.
+  Inside Widget component set data object by using switch method based on type.
+ */
   switch (type) {
     case "user":
       data = {
         title: "USERS",
         isMoney: false,
         link: "See all users",
-        icon: <AiOutlineUser className="icon" style={{
-            color: "crimson",
-            backgroundColor: "rgba(255, 0, 0, 0.2)",
-          }}/>,
+        icon: (
+          <AiOutlineUser
+            className="icon"
+            style={{
+              color: "crimson",
+              backgroundColor: "rgba(255, 0, 0, 0.2)",
+            }}
+          />
+        ),
       };
       break;
     case "order":
@@ -27,10 +37,15 @@ const Widget = ({ type }) => {
         title: "ORDERS",
         isMoney: false,
         link: "View all orders",
-        icon: <AiOutlineShopping className="icon" style={{
-            color: "goldenrod",
-            backgroundColor: "rgba(218, 165, 32, 0.2)",
-          }} />,
+        icon: (
+          <AiOutlineShopping
+            className="icon"
+            style={{
+              color: "goldenrod",
+              backgroundColor: "rgba(218, 165, 32, 0.2)",
+            }}
+          />
+        ),
       };
       break;
     case "earnings":
@@ -42,9 +57,9 @@ const Widget = ({ type }) => {
           <RiMoneyDollarCircleLine
             className="icon"
             style={{
-                color: "green",
-                backgroundColor: "rgba(0, 128, 0, 0.2)",
-              }}
+              color: "green",
+              backgroundColor: "rgba(0, 128, 0, 0.2)",
+            }}
           />
         ),
       };
@@ -54,10 +69,15 @@ const Widget = ({ type }) => {
         title: "BALANCE",
         isMoney: true,
         link: "See details",
-        icon: <MdOutlineAccountBalanceWallet className="icon" style={{
-            color: "purple",
-            backgroundColor: "rgba(128, 0, 128, 0.2)",
-          }}/>,
+        icon: (
+          <MdOutlineAccountBalanceWallet
+            className="icon"
+            style={{
+              color: "purple",
+              backgroundColor: "rgba(128, 0, 128, 0.2)",
+            }}
+          />
+        ),
       };
       break;
     default:

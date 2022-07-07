@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import {
   AreaChart,
   Area,
@@ -9,7 +9,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./Chart.scss";
-
+/* recharts area chart gradient removed from official documentation
+source: https://stackoverflow.com/questions/70312355/rechart-area-chart-gradient-colour-change-according-to-a-variable
+*/
 const data = [
   { name: "January", Total: 1200 },
   { name: "February", Total: 2100 },
@@ -18,11 +20,11 @@ const data = [
   { name: "May", Total: 900 },
   { name: "June", Total: 1500 },
 ];
-const Chart = () => {
+const Chart = ({aspect, title}) => {
   return (
     <div className="chart">
-      <div className="title">Last 6 Months (Revenue)</div>
-      <ResponsiveContainer width="100%" aspect={2 / 1}>
+      <div className="title">{title}</div>
+      <ResponsiveContainer width="100%" aspect={aspect}>
         <AreaChart
           width={500}
           height={400}
@@ -42,7 +44,7 @@ const Chart = () => {
           </defs>
           <XAxis dataKey="name" stroke="gray" />
           <YAxis dataKey="Total" stroke="gray" />
-          <CartesianGrid strokeDasharray="3 3" className="chartGrid"/>
+          <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
           <Tooltip />
           <Area
             type="monotone"
